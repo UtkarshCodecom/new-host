@@ -184,7 +184,7 @@ def handle_private(message: pyrogram.types.messages_and_media.message.Message, c
 				thumb = acc.download_media(msg.video.thumbs[0].file_id)
 			except: thumb = None
 			new_string = msg.caption.replace("Nishant Jindal", "Spirexa").replace("Ananth Garg", "Spirexa")
-			bot.send_video(message.chat.id, file, duration=msg.video.duration, width=msg.video.width, height=msg.video.height, thumb="thumb.png", caption=new_string, caption_entities=msg.caption_entities, reply_to_message_id=None, progress=progress, progress_args=[message,"up"])
+			bot.send_video(message.chat.id, file, duration=msg.video.duration, width=msg.video.width, height=msg.video.height, thumb="thumb.png", caption=msg.caption, caption_entities=msg.caption_entities, reply_to_message_id=None, progress=progress, progress_args=[message,"up"])
 			if thumb != None: os.remove(thumb)
 
 		elif "Animation" == msg_type:
