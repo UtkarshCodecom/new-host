@@ -3,3 +3,4 @@ tgcrypto
 flask
 PyMuPDF
 Pillow
+requests
