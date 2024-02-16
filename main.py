@@ -175,7 +175,7 @@ def handle_private(message: pyrogram.types.messages_and_media.message.Message, c
 			filename = "downloads/" +os.path.basename(full_path)
 			actual_path = os.path.dirname(full_path) + "\ " + os.path.basename(full_path)
 			aplywatermark(filename, file)
-			new_string = msg.caption.replace("Nishant Jindal", "Books Ka Khzana").replace("Ananth Garg", "Books Ka Khzana")
+			new_string = msg.caption.replace("Nishant Jindal", "TEAM SPIREXA").replace("Ananth Garg", "TEAM SPIREXA")
 			bot.send_document(message.chat.id, actual_path, thumb="thumb.png", caption=new_string, caption_entities=msg.caption_entities, reply_to_message_id=None, progress=progress, progress_args=[message,"up"])
    
 			if thumb != None: os.remove(thumb)
@@ -184,7 +184,7 @@ def handle_private(message: pyrogram.types.messages_and_media.message.Message, c
 			try: 
 				thumb = acc.download_media(msg.video.thumbs[0].file_id)
 			except: thumb = None
-			new_string = msg.caption.replace("Nishant Jindal", "Books Ka Khzana").replace("Ananth Garg", "Books Ka Khzana")
+			new_string = msg.caption.replace("Nishant Jindal", "TEAM SPIREXA").replace("Ananth Garg", "TEAM SPIREXA")
 			bot.send_video(message.chat.id, file, duration=msg.video.duration, width=msg.video.width, height=msg.video.height, thumb="thumb.png", caption=new_string, caption_entities=msg.caption_entities, reply_to_message_id=None, progress=progress, progress_args=[message,"up"])
 			if thumb != None: os.remove(thumb)
 
@@ -231,7 +231,7 @@ def aplywatermark(filename, file):
         image = Image.open(f"watermark_free_page_{page_index + 1}.png")
         width, height = image.size
         draw = ImageDraw.Draw(image)
-        text = 't.me/bookskakhazana02'
+        text = 'TEAM SPIREXA '
         font_size = 36 
         font_file_bytes = base64.b64decode(encoded_font)
         font_file = BytesIO(font_file_bytes)
