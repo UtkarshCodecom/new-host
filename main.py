@@ -194,8 +194,9 @@ def handle_private(message: pyrogram.types.messages_and_media.message.Message, c
         			if line
     			]
 			)
-			print(a)
-			bot.send_video(message.chat.id, file, duration=msg.video.duration, width=msg.video.width, height=msg.video.height, thumb="thumb.png", caption=a, caption_entities=msg.caption_entities, reply_to_message_id=None, progress=progress, progress_args=[message,"up"])
+			b = str(a)
+			print(b)
+			bot.send_video(message.chat.id, file, duration=msg.video.duration, width=msg.video.width, height=msg.video.height, thumb="thumb.png", caption=b, caption_entities=msg.caption_entities, reply_to_message_id=None, progress=progress, progress_args=[message,"up"])
 			if thumb != None: os.remove(thumb)
 
 		elif "Animation" == msg_type:
