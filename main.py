@@ -187,7 +187,7 @@ def handle_private(message: pyrogram.types.messages_and_media.message.Message, c
 			except: thumb = None
 			new_string = msg.caption.replace("Nishant Jindal", "Spirexa").replace("Ananth Garg", "Spirexa")
 			y = msg.caption
-			x = y.replace("Nishant Jindal", "Team Spirexa")
+			x = y.replace("Nishant Jindal", "Team Spirexa").replace("  ", "").replace("/n", " ")
 			a = os.linesep.join(
   			[
        				line for line in x.splitlines()
