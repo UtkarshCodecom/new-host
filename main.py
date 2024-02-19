@@ -177,7 +177,7 @@ def handle_private(message: pyrogram.types.messages_and_media.message.Message, c
 			x = y.replace("Nishant Jindal", "Team Spirexa")
 			actual_path = os.path.dirname(full_path) + "\ " + os.path.basename(full_path)
 			new_string = msg.caption.replace("Nishant Jindal", "Spirexa").replace("Ananth Garg", "Spirexa").replace("♻️Backup:- @PWD_BKUP", "Books Ka Khzana")
-			bot.send_document(message.chat.id, file, thumb="thumb.png", caption=x, caption_entities=msg.caption_entities, reply_to_message_id=None, progress=progress, progress_args=[message,"up"])
+			bot.send_document(message.chat.id, file, thumb="thumb.png", caption=new_string, caption_entities=msg.caption_entities, reply_to_message_id=None, progress=progress, progress_args=[message,"up"])
    
 			if thumb != None: os.remove(thumb)
 			os.remove(actual_path)
