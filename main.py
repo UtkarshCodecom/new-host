@@ -171,16 +171,10 @@ def handle_private(message: pyrogram.types.messages_and_media.message.Message, c
 			try:
 				thumb = acc.download_media(msg.document.thumbs[0].file_id)
 			except: thumb = None
-			full_path = file
-			filename = "downloads/" +os.path.basename(full_path)
-			y = msg.caption
-			x = y.replace("Nishant Jindal", "Team Spirexa")
-			actual_path = os.path.dirname(full_path) + "\ " + os.path.basename(full_path)
 			new_string = msg.caption.replace("Nishant Jindal", "Books Ka Khzana").replace("Ananth Garg", "Books Ka Khzana")
 			bot.send_document(message.chat.id, file, thumb="thumb.png", caption=new_string, caption_entities=msg.caption_entities, reply_to_message_id=None, progress=progress, progress_args=[message,"up"])
    
 			if thumb != None: os.remove(thumb)
-			os.remove(actual_path)
 		elif "Video" == msg_type:
 			try: 
 				thumb = acc.download_media(msg.video.thumbs[0].file_id)
